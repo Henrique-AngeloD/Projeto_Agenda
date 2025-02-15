@@ -6,7 +6,8 @@ package PRINCIPAL;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import javax.swing.JOptionPane;
+import javax.swing.JLabel;
+
 
 /**
  *
@@ -14,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class PRINCIPAL extends javax.swing.JFrame {
     int AnoFIXO = 0, MesFIXO = 0, DiaFIXO = 0;
-    int AnoAltera = 0, MesAltera = 0, DiaALTERA = 0;
+    int AnoAltera = 0, MesAltera = 0, DiaAltera = 0;
     int valorselecao = 0;
     
     /** Creates new form PRINCIPAL*/
@@ -35,7 +36,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jLayeredPane2 = new javax.swing.JLayeredPane();
         SelecaoMes = new javax.swing.JComboBox<>();
-        SelecaoAno = new javax.swing.JComboBox<>();
+        SelecaoAno = new javax.swing.JComboBox();
         jSpinner1 = new javax.swing.JSpinner();
         ls2 = new javax.swing.JLabel();
         ls1 = new javax.swing.JLabel();
@@ -87,6 +88,14 @@ public class PRINCIPAL extends javax.swing.JFrame {
         t34 = new javax.swing.JLabel();
         t35 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        AnoPagina1 = new javax.swing.JLabel();
+        AnoPagina2 = new javax.swing.JLabel();
+        SemanaPagina1 = new javax.swing.JLabel();
+        DiaPagina1 = new javax.swing.JLabel();
+        MesPagina1 = new javax.swing.JLabel();
+        SemanaPagina2 = new javax.swing.JLabel();
+        DiaPagina2 = new javax.swing.JLabel();
+        MesPagina2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -94,7 +103,6 @@ public class PRINCIPAL extends javax.swing.JFrame {
 
         jLayeredPane2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        SelecaoMes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         SelecaoMes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SelecaoMesActionPerformed(evt);
@@ -102,7 +110,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
         });
 
         SelecaoAno.setEditable(true);
-        SelecaoAno.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        SelecaoAno.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         SelecaoAno.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SelecaoAnoActionPerformed(evt);
@@ -385,8 +393,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
                             .addComponent(t28, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(t35, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(t42, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ls7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                            .addComponent(ls7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         jLayeredPane2Layout.setVerticalGroup(
             jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -464,8 +471,32 @@ public class PRINCIPAL extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
+        AnoPagina1.setText("jLabel1");
+
+        AnoPagina2.setText("jLabel1");
+
+        SemanaPagina1.setText("jLabel1");
+
+        DiaPagina1.setText("jLabel1");
+
+        MesPagina1.setText("jLabel1");
+
+        SemanaPagina2.setText("jLabel1");
+
+        DiaPagina2.setText("jLabel1");
+
+        MesPagina2.setText("jLabel1");
+
         jLayeredPane1.setLayer(jLayeredPane2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(AnoPagina1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(AnoPagina2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(SemanaPagina1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(DiaPagina1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(MesPagina1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(SemanaPagina2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(DiaPagina2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(MesPagina2, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -474,29 +505,86 @@ public class PRINCIPAL extends javax.swing.JFrame {
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addContainerGap(383, Short.MAX_VALUE))
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(175, 175, 175)
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jLayeredPane1Layout.createSequentialGroup()
+                                .addComponent(SemanaPagina1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                                .addComponent(AnoPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(169, 169, 169)
+                                .addComponent(SemanaPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52))
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(MesPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addComponent(DiaPagina1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(DiaPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(70, 70, 70))))
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGap(231, 231, 231)
+                        .addComponent(MesPagina1)
+                        .addContainerGap())))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(341, 341, 341)
+                    .addComponent(AnoPagina1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(696, Short.MAX_VALUE)))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
-                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(233, Short.MAX_VALUE))
+                    .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addGap(28, 28, 28)
+                                        .addComponent(AnoPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                        .addGap(19, 19, 19)
+                                        .addComponent(SemanaPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(DiaPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jLayeredPane1Layout.createSequentialGroup()
+                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(SemanaPagina1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(DiaPagina1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(26, 26, 26)
+                                .addComponent(MesPagina1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(MesPagina2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(438, Short.MAX_VALUE))
+            .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGap(70, 70, 70)
+                    .addComponent(AnoPagina1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(573, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLayeredPane1)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -546,8 +634,16 @@ public class PRINCIPAL extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> SelecaoAno;
+    private javax.swing.JLabel AnoPagina1;
+    private javax.swing.JLabel AnoPagina2;
+    private javax.swing.JLabel DiaPagina1;
+    private javax.swing.JLabel DiaPagina2;
+    private javax.swing.JLabel MesPagina1;
+    private javax.swing.JLabel MesPagina2;
+    private javax.swing.JComboBox SelecaoAno;
     private javax.swing.JComboBox<String> SelecaoMes;
+    private javax.swing.JLabel SemanaPagina1;
+    private javax.swing.JLabel SemanaPagina2;
     private javax.swing.JButton jButton1;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JLayeredPane jLayeredPane2;
@@ -613,10 +709,109 @@ public class PRINCIPAL extends javax.swing.JFrame {
         MesFIXO = Integer.parseInt(Mes.format(new Date()));
         DiaFIXO = Integer.parseInt(Dia.format(new Date()));
         
-        JOptionPane.showMessageDialog(null, DiaFIXO+"/"+MesFIXO+"/"+AnoFIXO);
+//        JOptionPane.showMessageDialog(null, DiaFIXO+"/"+MesFIXO+"/"+AnoFIXO);
+
+        int AnoMaximo = AnoFIXO + 50;
+        for(int i = 2000; i < AnoMaximo; i++){
+            SelecaoAno.addItem(i);
+        }
+        SelecaoAno.setSelectedItem(AnoFIXO);
+        
+        SelecaoMes.addItem("Janeiro");
+        SelecaoMes.addItem("Fevereiro");
+        SelecaoMes.addItem("Março");
+        SelecaoMes.addItem("Abril");
+        SelecaoMes.addItem("Maio");
+        SelecaoMes.addItem("Junho");
+        SelecaoMes.addItem("Julho");
+        SelecaoMes.addItem("Agosto");
+        SelecaoMes.addItem("Setembro");
+        SelecaoMes.addItem("Outubro");
+        SelecaoMes.addItem("Novembro");
+        SelecaoMes.addItem("Dezembro");
+    
+        
+        if (MesFIXO == 1){
+            SelecaoMes.setSelectedIndex(0);
+        } else if (MesFIXO == 2) {
+            SelecaoMes.setSelectedIndex(1);
+        } else if (MesFIXO == 3) {
+            SelecaoMes.setSelectedIndex(2);
+        } else if (MesFIXO == 4) {
+            SelecaoMes.setSelectedIndex(3);
+        } else if (MesFIXO == 5) {
+            SelecaoMes.setSelectedIndex(4);
+        } else if (MesFIXO == 6) {
+            SelecaoMes.setSelectedIndex(5);
+        } else if (MesFIXO == 7) {
+            SelecaoMes.setSelectedIndex(6);
+        } else if (MesFIXO == 8) {
+            SelecaoMes.setSelectedIndex(7);
+        } else if (MesFIXO == 9) {
+            SelecaoMes.setSelectedIndex(8);
+        } else if (MesFIXO == 10) {
+            SelecaoMes.setSelectedIndex(9);
+        } else if (MesFIXO == 11) {
+            SelecaoMes.setSelectedIndex(10);
+        } else if (MesFIXO == 12) {
+            SelecaoMes.setSelectedIndex(11);
+        }
         
     }
 
 
+    
+    public void CALENDARIO() {
+         JLabel[] campos = {t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, 
+                       t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, 
+                       t21, t22, t23, t24, t25, t26, t27, t28, t29, t30, 
+                       t31, t32, t33, t34, t35, t36, t37, t38, t39, t40, 
+                       t41, t42};
+
+    for (JLabel campo : campos) {
+        campo.setText(""); // Define o texto como vazio
+    }
+    
+    DiaAltera = DiaFIXO;
+    MesAltera = SelecaoMes.getSelectedIndex();
+    AnoAltera = Integer.parseInt(SelecaoAno.getSelectedItem().toString());
+    
+    int TotalDiaMes = 0;
+    if (MesAltera == 0){
+        TotalDiaMes = 31;
+    } else if (MesAltera == 1){
+        int resultado = (AnoAltera % 4);
+        if (resultado == 0){
+            TotalDiaMes = 29;
+        } else {
+            TotalDiaMes = 28;
+        }
+    } else if (MesAltera == 2){
+        TotalDiaMes = 31;
+    } else if (MesAltera == 3){
+        TotalDiaMes = 30;
+    } else if (MesAltera == 4){
+        TotalDiaMes = 31;
+    } else if (MesAltera == 5){
+        TotalDiaMes = 30;
+    } else if (MesAltera == 6){
+        TotalDiaMes = 31;
+    } else if (MesAltera == 7){
+        TotalDiaMes = 31;
+    } else if (MesAltera == 8){
+        TotalDiaMes = 30;
+    } else if (MesAltera == 9){
+        TotalDiaMes = 31;
+    } else if (MesAltera == 10){
+        TotalDiaMes = 30;
+    } else if (MesAltera == 11){
+        TotalDiaMes = 31;
+    }
+    
+    
+    
+    
+    
+    }
 
 }
